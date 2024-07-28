@@ -37,6 +37,7 @@ sh_ix= (select item_ix from cnporam where name='grass cutting') where name ='per
 update cnpplant set 
 gm_ix= (select item_ix from cnporam where name='grass 1 cut') where name ='permGrassland';
 
+drop table if exists cnpgrazing;
 
 CREATE TABLE public.cnpgrazing (
 	item_ix int4 NULL,
@@ -45,15 +46,15 @@ CREATE TABLE public.cnpgrazing (
 	oram_id int4 NULL,
 	n_offt float8 NULL,    
 	p_offt float8 NULL,
-	c_offt float8 NULL
-    "comment" text NULL,
+	c_offt float8 NULL,
+    "comment" text NULL
 );
 
 insert into public.cnpgrazing (item_ix,"name",n_offt,c_excr,oram_id,"comment",p_offt,c_offt) values (0,'cattle unit',0.308,1.74,-99,'from candy as daily prms',0.117,5.33);
 
-update cnpgrazing set oram_id= (select item_ix from cnporam where name='feces')
+update cnpgrazing set oram_id= (select item_ix from cnporam where name='feces');
 
-drop view public.cnp_objects;
+drop view if exists public.cnp_objects;
 
 CREATE OR REPLACE VIEW public.cnp_objects
 AS SELECT 0 AS macode,
