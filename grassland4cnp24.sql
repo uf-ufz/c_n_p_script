@@ -79,7 +79,7 @@ UNION
     100000 * 1 + cnpplant.item_ix AS ix
    FROM cnpplant,
     cnpaction
-  WHERE cnpaction.action_id = 1
+  WHERE cnpaction.action_id = 1 and not( left(cnpplant.name,5)='permG' )
 UNION
  SELECT 2 AS macode,
     cnpaction.action,
@@ -91,7 +91,7 @@ UNION
     100000 * 2 + cnpplant.item_ix AS ix
    FROM cnpplant,
     cnpaction
-  WHERE cnpaction.action_id = 2
+  WHERE cnpaction.action_id = 2 and not( left(cnpplant.name,5)='permG' )
 UNION
  SELECT 9 AS macode,
     cnpaction.action,
@@ -103,7 +103,7 @@ UNION
     100000 * 9 + cnpplant.item_ix AS ix
    FROM cnpplant,
     cnpaction
-  WHERE cnpaction.action_id = 9
+  WHERE cnpaction.action_id = 9 and not( left(cnpplant.name,5)='permG' )
 UNION
  SELECT 3 AS macode,
     cnpaction.action,
@@ -161,7 +161,7 @@ UNION
     100000 * 6 + cnpplant.item_ix AS ix
    FROM cnpplant,
     cnpaction
-  WHERE cnpaction.action_id = 6
+  WHERE cnpaction.action_id = 6 and  left(cnpplant.name,5)='permG'
 UNION
  SELECT 12 AS macode,
     cnpaction.action,
@@ -173,7 +173,7 @@ UNION
     100000 * 12 + cnpplant.item_ix AS ix
    FROM cnpplant,
     cnpaction
-  WHERE cnpaction.action_id = 12
+  WHERE cnpaction.action_id = 12 and  left(cnpplant.name,5)='permG'
 UNION
  SELECT 7 AS macode,
     'irrigation'::character varying AS action,
@@ -196,5 +196,4 @@ UNION
     100000 * 10 + 0 AS ix
    FROM cnpaction,cnpgrazing
   WHERE cnpaction.action_id = 10
-
   ORDER BY 8;
