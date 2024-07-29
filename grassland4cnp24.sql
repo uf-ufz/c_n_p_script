@@ -1,5 +1,5 @@
-insert into cnpaction ("action",action_de,action_en,action_id,unit_intensity,def_intensity,def_intensity_en,def_intensity_de) values ('cutting grasland              ','Mahd Grünland','cutting grasland',6,'dt/ha               ','yield (DM)          ','yield (DM)','Ertrag (DM)');
-insert into cnpaction ("action",action_de,action_en,action_id,unit_intensity,def_intensity,def_intensity_en,def_intensity_de) values ('start grassland               ','start grassland','start grassland',12,'dt/ha               ','-                   ','-','-');
+insert into cnpaction ("action",action_de,action_en,action_id,unit_intensity,def_intensity,def_intensity_en,def_intensity_de) values ('cutting grasland              ','Mahd Grasland','cutting grasland',6,'dt/ha               ','yield (DM)          ','yield (DM)','Ertrag (DM)');
+insert into cnpaction ("action",action_de,action_en,action_id,unit_intensity,def_intensity,def_intensity_en,def_intensity_de) values ('start grassland               ','Start Grasland','start grassland',12,'dt/ha               ','-                   ','-','-');
 insert into cnpaction ("action",action_de,action_en,action_id,unit_intensity,def_intensity,def_intensity_en,def_intensity_de) values ('grazing                ','Weide','grazing',10,'#/ha              ','cattle units                  ','cattle units','GVE');
 
 insert into cnporam (oram,item_ix,"name",name_en,name_de,dm,c_dm,cnr,cnr_alt,mor,cpr,k,eta,ros_ix,"comment",pmor ) 
